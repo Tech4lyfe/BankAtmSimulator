@@ -19,7 +19,7 @@ namespace BankATMSimulator.Models.BankAtmEntities
         public string LastName { get; set; }
 
         [DataType(DataType.Currency)]
-        public double Balance { get; set; }
+        public decimal Balance { get; set; }
 
         [Required]
         [StringLength(10)]

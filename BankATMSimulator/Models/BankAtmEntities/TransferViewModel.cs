@@ -10,8 +10,9 @@ namespace BankATMSimulator.Models.BankAtmEntities
     {
         [Required]
         [DataType(DataType.Currency)]
-        public double Amount { get; set; }
+        public decimal Amount { get; set; }
 
+        [Required]
         [Display(Name = "To Account #")]
         public string TargetCheckingAccountNumber { get; set; }
 

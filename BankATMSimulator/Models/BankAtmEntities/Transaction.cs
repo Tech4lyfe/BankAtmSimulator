@@ -7,7 +7,7 @@ namespace BankATMSimulator.Models.BankAtmEntities
        [Required]
         public int TransactionId { get; set; }
        [DataType(DataType.Currency)]
-        public double Amount { get; set; }
+        public decimal Amount { get; set; }
 
         [Required]
         public int CheckingAccountId { get; set; }

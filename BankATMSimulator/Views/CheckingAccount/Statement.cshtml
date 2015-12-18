@@ -1,11 +1,12 @@
-﻿@model IEnumerable<BankATMSimulator.Models.BankAtmEntities.Transaction>
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<BankATMSimulator.Models.BankAtmEntities.Transaction>
 
 @{
     ViewBag.Title = "Statement";
 }
 
 <p>
-    
+
 </p>
 
 <div class="container">
@@ -14,10 +15,10 @@
         <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.TransactionId)
+                @Html.DisplayNameFor(model => model.First().TransactionId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Amount)
+                @Html.DisplayNameFor(model => model.First().Amount)
             </th>
         </tr>
         </thead>
@@ -37,4 +38,11 @@
         }
 
     </table>
+    @Html.PagedListPager(Model, page => Url.Action("Statement", new { page }),
+        new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true })
+
+)
+
+    ..)
 </div>
+V

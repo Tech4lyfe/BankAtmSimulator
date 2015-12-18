@@ -5,6 +5,7 @@ using System.Web.Mvc;
 using BankATMSimulator.Models.BankAtmEntities;
 using BankATMSimulator.Models.DbContext;
 using Microsoft.AspNet.Identity;
+using PagedList;
 
 namespace BankATMSimulator.Controllers
 {
@@ -86,16 +87,16 @@ namespace BankATMSimulator.Controllers
         }
 
        
-        public ActionResult List(string searchBy, string search)
+        public ActionResult List(string searchBy, string search, int? page)
         {
-            return View(searchBy == "FirstName" ? _db.CheckingAccounts.Where(c => c.FirstName.StartsWith(search) || search == null).ToList() : _db.CheckingAccounts.Where(c => c.AccountNumber == search || search == null).ToList());
+            return View(searchBy == "FirstName" ? _db.CheckingAccounts.Where(c => c.FirstName.StartsWith(search) || search == null).ToList().ToPagedList(page ?? 1,3) : _db.CheckingAccounts.Where(c => c.AccountNumber == search || search == null).ToList().ToPagedList(page ?? 1,3));
         }
 
-        public ActionResult Statement(int id)
+        public ActionResult Statement(int id, int? page)
         {
 
             var checkingAccount = _db.CheckingAccounts.Find(id);
-            return View(checkingAccount.Transactions.ToList());
+            return View(checkingAccount.Transactions.ToList().ToPagedList(page ?? 1,10));
         }
         
     }

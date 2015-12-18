@@ -55,3 +55,7 @@ c:\users\techboymac\documents\visual studio 2013\Projects\BankATMSimulator\BankA
 C:\Users\TechBoyMac\documents\visual studio 2013\Projects\BankATMSimulator\BankATMSimulator\obj\Debug\BankATMSimulator.Migrations.InitialSetup.resources
 C:\Users\TechBoyMac\documents\visual studio 2013\Projects\BankATMSimulator\BankATMSimulator\obj\Debug\BankATMSimulator.csproj.GenerateResource.Cache
 C:\Users\TechBoyMac\documents\visual studio 2013\Projects\BankATMSimulator\BankATMSimulator\obj\Debug\BankATMSimulator.csprojResolveAssemblyReference.cache
+C:\Users\TechBoyMac\documents\visual studio 2013\Projects\BankATMSimulator\BankATMSimulator\bin\PagedList.dll
+C:\Users\TechBoyMac\documents\visual studio 2013\Projects\BankATMSimulator\BankATMSimulator\bin\PagedList.Mvc.dll
+C:\Users\TechBoyMac\documents\visual studio 2013\Projects\BankATMSimulator\BankATMSimulator\bin\PagedList.xml
+C:\Users\TechBoyMac\documents\visual studio 2013\Projects\BankATMSimulator\BankATMSimulator\bin\PagedList.Mvc.xml

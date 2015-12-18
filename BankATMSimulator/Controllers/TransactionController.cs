@@ -55,7 +55,7 @@ namespace BankATMSimulator.Controllers
             
             if (targetCheckingAccount == null)
             {
-                ModelState.AddModelError("TargetAccountNumber", "Invalid Target");
+                ModelState.AddModelError("TargetCheckingAccountNumber", "Invalid Target Account Number!");
             }
             if (ModelState.IsValid)
             {
@@ -81,7 +81,7 @@ namespace BankATMSimulator.Controllers
             var checkingAccount = _db.CheckingAccounts.Find(checkingAccountId);
             var transaction = new Transaction
             {
-                Amount = -50.00,
+                Amount = (decimal) -50.00,
                 CheckingAccount = checkingAccount
             };
 
