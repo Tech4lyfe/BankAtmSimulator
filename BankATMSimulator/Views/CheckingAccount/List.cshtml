@@ -1,0 +1,81 @@
+﻿@model IEnumerable<BankATMSimulator.Models.BankAtmEntities.CheckingAccount>
+
+@{
+    ViewBag.Title = "CheckingAccountIdList";
+}
+<div class="container">
+
+    <p>
+        @using (Html.BeginForm("List", "CheckingAccount", FormMethod.Get))
+        {
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <b>Search by:</b>
+                    @Html.RadioButton("searchBy", "FirstName", true) Name
+                    @Html.RadioButton("searchBy", "AccountNumber") Account #
+                    <br />
+                </div>
+                <div class="form-group">
+                    @Html.TextBox("search") <input type="submit" value="search" />
+                </div>
+            </div>
+        }
+    </p>
+
+
+
+
+    <h2>CheckingAccount's</h2>
+    <table class="table table-bordered table-hover table-condensed table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.User.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Balance)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AccountNumber)
+                </th>
+                <th>Account Actions</th>
+            </tr>
+
+            @if (!Model.Any())
+            {
+                <tr>
+                    <td colspan="4"><b>No rows match search criteria</b></td>
+                </tr>
+            }
+
+
+            @foreach (var item in Model)
+            {
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Balance)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AccountNumber)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "DetialsForAdim", new {id = item.CheckingAccountId}) |
+                        @Html.ActionLink("Edit", "Edit", new {id = item.CheckingAccountId}) |
+                        @Html.ActionLink("DeleteAccount", "DeleteAccounts", new { id = item.CheckingAccountId })
+                    </td>
+                </tr>
+            </tbody>
+            }
+
+        </table>
+    </div>

@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+@Html.Hidden("checkingAccountId",(int)(ViewBag.CheckingAccountId))
+
+<div class="row">
+    <div class="col-md-6 margin-top-20">
+        <a href="@Url.Action("Deposit", "Transaction", new { checkingAccountId = ViewBag.CheckingAccountId })" class="btn btn-primary btn-block btn-lg">
+            <span class="glyphicon glyphicon-circle-arrow-up"></span>Deposit
+        </a>
+
+        <a href="@Url.Action("Details", "CheckingAccount")" class="btn btn-primary btn-block btn-lg">
+            <span class="glyphicon glyphicon-question-sign " style="padding-bottom: 6px"></span>Account Balance
+        </a>
+
+        <a href="#" id="QuickCash" class="btn btn-primary btn-block btn-lg">
+            <span class="glyphicon glyphicon-flash"></span>Quick Cash $50
+        </a>
+    </div>
+    <div class="col-md-6 margin-top-20">
+        <a href="@Url.Action("Withdrawal", "Transaction", new { checkingaccountId = ViewBag.CheckingAccountId })" class=" btn btn-primary btn-block btn-lg">
+            <span class="glyphicon glyphicon-circle-arrow-down"> </span>Withdrawal
+        </a>
+        <a href="@Url.Action("TransferFunds","Transaction", new{ checkingAccountId = ViewBag.CheckingAccountId})"  class="btn btn-primary btn-block btn-lg">
+            <span class="glyphicon glyphicon-transfer" style="padding-bottom: 3px"></span>Transfer Funds
+        </a>
+        <a href="@Url.Action("Statement", "CheckingAccount", new { id = ViewBag.CheckingAccountId })" class="btn btn-primary btn-block btn-lg">
+            <span class="glyphicon glyphicon-print" style="padding-bottom: 8px"></span>Print Statment
+        </a>
+    </div>
+</div>

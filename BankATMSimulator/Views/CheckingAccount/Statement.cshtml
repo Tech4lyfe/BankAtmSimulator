@@ -1,0 +1,40 @@
+﻿@model IEnumerable<BankATMSimulator.Models.BankAtmEntities.Transaction>
+
+@{
+    ViewBag.Title = "Statement";
+}
+
+<p>
+    
+</p>
+
+<div class="container">
+    <h2>Statements</h2>
+    <table class="table table-bordered table-hover table-condensed table-striped">
+        <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+        </tr>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+            <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TransactionId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+            </tr>
+            </tbody>
+        }
+
+    </table>
+</div>
