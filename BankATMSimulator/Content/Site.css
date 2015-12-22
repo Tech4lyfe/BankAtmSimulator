@@ -1,6 +1,29 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+   
+}
+
+.custom {
+    background-color: #008080;
+    
+    color: #FFF;
+}
+
+.jumbotron {
+    background-color: #FFF;
+}
+
+
+
+.header {
+    height: 100px;
+    position: fixed;
+    top: 100px;
+    background-size: cover;
+    width: 100%;
+    top: 0px;
+    z-index: 57;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -52,3 +75,6 @@ dl {
     
     
 }
+
+
+.navbar-inverse{background-color:#3756A5;border-color:#3756A5}.navbar-inverse .navbar-brand{color:#FFF}.navbar-inverse .navbar-brand:hover,.navbar-inverse .navbar-brand:focus{color:#FFF;background-color:transparent}.navbar-inverse .navbar-text{color:#FFF}.navbar-inverse .navbar-nav>li>a{color:#FFF}.navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>li>a:focus{color:#fff;background-color:transparent}

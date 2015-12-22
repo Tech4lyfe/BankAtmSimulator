@@ -191,6 +191,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Img\Commercial Shopping Centre 3D Architectural Renderings CSJZXG_2016.jpg" />
     <Content Include="Content\Img\coollogo_com-78691581 %282%29.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
